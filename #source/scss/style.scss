@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Babylonica&family=Gugi&family=Shadows+Into+Light&display=swap");
+
+@import "null";
+
+@mixin defaultStyle {
+	font-size: 30px;
+	line-height: 35px;
+	margin: 0 0 30px 0;
+	p {
+		margin-bottom: 30px;
+	}
+}
+
+body {
+	background-color: #333;
+}
