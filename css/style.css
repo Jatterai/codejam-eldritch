@@ -430,6 +430,12 @@ section.off {
           box-shadow: 0px 3px 5px black;
 }
 
+@media (max-width: 767px) {
+  .game__table {
+    display: block;
+  }
+}
+
 .game__deck, .game__playingCard {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 44%;
@@ -469,6 +475,20 @@ section.off {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   font-size: 1em;
+}
+
+@media (max-width: 767px) {
+  .game__cardBack {
+    padding-bottom: 20%;
+    background-color: #333;
+    background-blend-mode: multiply;
+    margin-bottom: 5%;
+  }
+}
+
+.game__cardBack.closed {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#333), to(#222));
+  background-image: linear-gradient(#333 0%, #222 100%);
 }
 
 .game__cardFront {

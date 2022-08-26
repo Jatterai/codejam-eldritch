@@ -34,7 +34,10 @@ function start(e) {
 	const cardBack = document.querySelector('.game__cardBack');
 	let currentStage = 0;
 	let currentCard = 0;
-	cardBack.addEventListener('click', (e) => {
+	cardBack.addEventListener('click', function meow(e) {
+		const cardContainer = document.getElementById('current-card');
+		cardContainer.style.backgroundImage = `url('${game.deck[currentStage][currentCard]['cardFace']}')`;
+		currentCard++;
 
 		if (!game.deck[currentStage][currentCard]) {
 			currentCard = 0;
@@ -42,13 +45,10 @@ function start(e) {
 		}
 
 		if (!game.deck[currentStage]) {
-			e.currentTarget.remove();
+			e.currentTarget.classList.add('closed')
+			e.currentTarget.removeEventListener('click', meow);
 			return;
 		}
-
-		const cardContainer = document.getElementById('current-card');
-		cardContainer.style.backgroundImage = `url('${game.deck[currentStage][currentCard]['cardFace']}')`;
-		currentCard++;
 	});
 
 }
