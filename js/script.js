@@ -1,5 +1,5 @@
 import { Game } from './tryOne.js'
-
+import * as myEvents from './events.js'
 
 let chosenAntient, chosenLevel, game;
 
@@ -23,12 +23,34 @@ function chooser(e) {
 );
 
 function start(e) {
-	const button = e.target.closest('button.button');
-	if (!button) return;
 	[chosenAntient, chosenLevel] = [document.querySelector('.antient.checked').getAttribute('id'), document.querySelector('.level__item.checked').getAttribute('id')];
-
-
 	game = new Game(chosenAntient, chosenLevel);
+
+	//!!!
+	const ancPic = document.getElementById('ancient-pic');
+	ancPic.append(game.ancientCard());
+
+	game.generateStages();
+	const cardBack = document.querySelector('.game__cardBack');
+	let currentStage = 0;
+	let currentCard = 0;
+	cardBack.addEventListener('click', (e) => {
+
+		if (!game.deck[currentStage][currentCard]) {
+			currentCard = 0;
+			currentStage++;
+		}
+
+		if (!game.deck[currentStage]) {
+			e.currentTarget.remove();
+			return;
+		}
+
+		const cardContainer = document.getElementById('current-card');
+		cardContainer.style.backgroundImage = `url('${game.deck[currentStage][currentCard]['cardFace']}')`;
+		currentCard++;
+	});
+
 }
 
 function fadeOut(e) {
@@ -40,7 +62,7 @@ function fadeOut(e) {
 	setTimeout(() => {
 		current.hidden = true;
 
-		if (next && next.className.includes('level off')) {
+		if (next && next.className.includes('off')) {
 			next.hidden = '';
 			next.classList.remove('off');
 		};

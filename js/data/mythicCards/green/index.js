@@ -5,6 +5,7 @@ const cardsData = [
 		difficulty: 'easy',
 		color: 'green'
 	},
+
 	{
 		id: 'green2',
 		cardFace: '../../../../img/MythicCards/green/green2.png',
