@@ -1,5 +1,7 @@
+import { Game } from './tryOne.js'
 
-let chosenAntient, chosenLevel;
+
+let chosenAntient, chosenLevel, game;
 
 const antientsList = document.querySelector('.antients__row');
 const antientsButton = document.getElementById('anitents-submit');
@@ -23,7 +25,10 @@ function chooser(e) {
 function start(e) {
 	const button = e.target.closest('button.button');
 	if (!button) return;
-	[chosenAntient, chosenLevel] = [document.querySelector('.antient.checked').getAttribute('id'), document.querySelector('.level__item.checked').getAttribute('id')]
+	[chosenAntient, chosenLevel] = [document.querySelector('.antient.checked').getAttribute('id'), document.querySelector('.level__item.checked').getAttribute('id')];
+
+
+	game = new Game(chosenAntient, chosenLevel);
 }
 
 function fadeOut(e) {
@@ -35,7 +40,7 @@ function fadeOut(e) {
 	setTimeout(() => {
 		current.hidden = true;
 
-		if (next && next.className.includes('off') && next.tagName === 'SECTION') {
+		if (next && next.className.includes('level off')) {
 			next.hidden = '';
 			next.classList.remove('off');
 		};

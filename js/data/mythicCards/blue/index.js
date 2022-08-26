@@ -1,75 +1,73 @@
-import blueCardsAssets from '../../../../img/MythicCards/blue';
-
 const cardsData = [
 	{
 		id: 'blue1',
-		cardFace: blueCardsAssets.blue1,
+		cardFace: '../../../../img/MythicCards/blue/blue1.png',
 		difficulty: 'hard',
 		color: 'blue'
 	},
 	{
 		id: 'blue2',
-		cardFace: blueCardsAssets.blue2,
+		cardFace: '../../../../img/MythicCards/blue/blue2.png',
 		difficulty: 'hard',
 		color: 'blue'
 	},
 	{
 		id: 'blue3',
-		cardFace: blueCardsAssets.blue3,
+		cardFace: '../../../../img/MythicCards/blue/blue3.png',
 		difficulty: 'easy',
 		color: 'blue'
 	},
 	{
 		id: 'blue4',
-		cardFace: blueCardsAssets.blue4,
+		cardFace: '../../../../img/MythicCards/blue/blue4.png',
 		difficulty: 'easy',
 		color: 'blue'
 	},
 	{
 		id: 'blue5',
-		cardFace: blueCardsAssets.blue5,
+		cardFace: '../../../../img/MythicCards/blue/blue5.png',
 		difficulty: 'easy',
 		color: 'blue'
 	},
 	{
 		id: 'blue6',
-		cardFace: blueCardsAssets.blue6,
+		cardFace: '../../../../img/MythicCards/blue/blue6.png',
 		difficulty: 'hard',
 		color: 'blue'
 	},
 	{
 		id: 'blue7',
-		cardFace: blueCardsAssets.blue7,
+		cardFace: '../../../../img/MythicCards/blue/blue7.png',
 		difficulty: 'normal',
 		color: 'blue'
 	},
 	{
 		id: 'blue8',
-		cardFace: blueCardsAssets.blue8,
+		cardFace: '../../../../img/MythicCards/blue/blue8.png',
 		difficulty: 'hard',
 		color: 'blue'
 	},
 	{
 		id: 'blue9',
-		cardFace: blueCardsAssets.blue9,
+		cardFace: '../../../../img/MythicCards/blue/blue9.png',
 		difficulty: 'normal',
 		color: 'blue'
 	},
 	{
 		id: 'blue10',
-		cardFace: blueCardsAssets.blue10,
+		cardFace: '../../../../img/MythicCards/blue/blue10.png',
 		difficulty: 'easy',
 		color: 'blue'
 	},
 	{
 		id: 'blue11',
-		cardFace: blueCardsAssets.blue11,
+		cardFace: '../../../../img/MythicCards/blue/blue11.png',
 		difficulty: 'normal',
 		color: 'blue'
 	},
 	{
 		id: 'blue12',
-		cardFace: blueCardsAssets.blue12,
+		cardFace: '../../../../img/MythicCards/blue/blue12.png',
 		difficulty: 'normal',
 		color: 'blue'
 	},

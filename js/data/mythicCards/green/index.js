@@ -1,111 +1,109 @@
-import greenCardsAssets from '../../../../img/MythicCards/green';
-
 const cardsData = [
 	{
 		id: 'green1',
-		cardFace: greenCardsAssets.green1,
+		cardFace: `../../../../img/MythicCards/green/green1.png`,
 		difficulty: 'easy',
 		color: 'green'
 	},
 	{
 		id: 'green2',
-		cardFace: greenCardsAssets.green2,
+		cardFace: '../../../../img/MythicCards/green/green2.png',
 		difficulty: 'hard',
 		color: 'green'
 	},
 	{
 		id: 'green3',
-		cardFace: greenCardsAssets.green3,
+		cardFace: '../../../../img/MythicCards/green/green3.png',
 		difficulty: 'hard',
 		color: 'green'
 	},
 	{
 		id: 'green4',
-		cardFace: greenCardsAssets.green4,
+		cardFace: '../../../../img/MythicCards/green/green4.png',
 		difficulty: 'hard',
 		color: 'green'
 	},
 	{
 		id: 'green5',
-		cardFace: greenCardsAssets.green5,
+		cardFace: '../../../../img/MythicCards/green/green5.png',
 		difficulty: 'hard',
 		color: 'green'
 	},
 	{
 		id: 'green6',
-		cardFace: greenCardsAssets.green6,
+		cardFace: '../../../../img/MythicCards/green/green6.png',
 		difficulty: 'hard',
 		color: 'green'
 	},
 	{
 		id: 'green7',
-		cardFace: greenCardsAssets.green7,
+		cardFace: '../../../../img/MythicCards/green/green7.png',
 		difficulty: 'normal',
 		color: 'green'
 	},
 	{
 		id: 'green8',
-		cardFace: greenCardsAssets.green8,
+		cardFace: '../../../../img/MythicCards/green/green8.png',
 		difficulty: 'normal',
 		color: 'green'
 	},
 	{
 		id: 'green9',
-		cardFace: greenCardsAssets.green9,
+		cardFace: '../../../../img/MythicCards/green/green9.png',
 		difficulty: 'normal',
 		color: 'green'
 	},
 	{
 		id: 'green10',
-		cardFace: greenCardsAssets.green10,
+		cardFace: '../../../../img/MythicCards/green/green10.png',
 		difficulty: 'normal',
 		color: 'green'
 	},
 	{
 		id: 'green11',
-		cardFace: greenCardsAssets.green11,
+		cardFace: '../../../../img/MythicCards/green/green11.png',
 		difficulty: 'normal',
 		color: 'green'
 	},
 	{
 		id: 'green12',
-		cardFace: greenCardsAssets.green12,
+		cardFace: '../../../../img/MythicCards/green/green12.png',
 		difficulty: 'easy',
 		color: 'green'
 	},
 	{
 		id: 'green13',
-		cardFace: greenCardsAssets.green13,
+		cardFace: '../../../../img/MythicCards/green/green13.png',
 		difficulty: 'normal',
 		color: 'green'
 	},
 	{
 		id: 'green14',
-		cardFace: greenCardsAssets.green14,
+		cardFace: '../../../../img/MythicCards/green/green14.png',
 		difficulty: 'normal',
 		color: 'green'
 	},
 	{
 		id: 'green15',
-		cardFace: greenCardsAssets.green15,
+		cardFace: '../../../../img/MythicCards/green/green15.png',
 		difficulty: 'normal',
 		color: 'green'
 	},
 	{
 		id: 'green16',
-		cardFace: greenCardsAssets.green16,
+		cardFace: '../../../../img/MythicCards/green/green16.png',
 		difficulty: 'easy',
 		color: 'green'
 	},
 	{
 		id: 'green17',
-		cardFace: greenCardsAssets.green17,
+		cardFace: '../../../../img/MythicCards/green/green17.png',
 		difficulty: 'easy',
 		color: 'green'
 	},
 	{
 		id: 'green18',
-		cardFace: greenCardsAssets.green18,
+		cardFace: '../../../../img/MythicCards/green/green18.png',
 		difficulty: 'easy',
 		color: 'green'
 	},

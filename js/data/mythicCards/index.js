@@ -1,9 +1,9 @@
-import brownCards from './brown';
-import blueCards from './blue';
-import greenCards from './green';
+import brownCards from './brown/index.js';
+import blueCards from './brown/index.js';
+import greenCards from './brown/index.js';
 
 export {
-  brownCards,
-  blueCards,
-  greenCards
+	brownCards,
+	blueCards,
+	greenCards
 }

@@ -12,8 +12,8 @@
 <body>
 	<div class="wrapper">
 		<section class="antients">
-			<h2 class="antients__title title">Choose The Antient</h2>
 			<div class="antients__container _container">
+				<h2 class="antients__title title">Choose The Antient</h2>
 				<ul class="antients__row">
 					<li class="antients__item antient" id="azathoth">
 
@@ -41,8 +41,9 @@
 			</div>
 		</section>
 		<section class="level off" hidden>
-			<h2 class="title level__title">Difficulty</h2>
+
 			<div class="level__container _container">
+				<h2 class="title level__title">Difficulty</h2>
 				<ul action="#" class="level__list">
 					<li class="level__item" id="easiest">
 						Easiest then Easy
@@ -63,9 +64,58 @@
 				<button type="button" class="level__button button">Start</button>
 			</div>
 		</section>
-		<section></section>
+		<section class="game off" hidden>
+			<div class="game__container _container">
+				<h2 class="game__title title">Heres your Game Deck</h2>
+				<div class="game__row">
+					<div class="game__info">
+						<div class="game__ancient-img">
+							<img src="./img/Ancients/Azathoth.png" alt="">
+						</div>
+						<div class="game__tracker">
+							<div class="game__stage game__stage-first stage">
+								<h3 class="stage__title">First Stage</h3>
+								<div class="stage__circles">
+									<div class="stage__green stage__circle" id="firstgreen"></div>
+									<div class="stage__brown stage__circle" id="firstbrown"></div>
+									<div class="stage__blue stage__circle" id="firstblue"></div>
+								</div>
+							</div>
+							<div class="game__stage game__stage-second stage">
+								<h3 class="stage__title">Second Stage</h3>
+								<div class="stage__circles">
+									<div class="stage__green stage__circle" id="secondgreen"></div>
+									<div class="stage__brown stage__circle" id="secondbrown"></div>
+									<div class="stage__blue stage__circle" id="secondblue"></div>
+								</div>
+							</div>
+							<div class="game__stage game__stage-third stage">
+								<h3 class="stage__title">Third Stage</h3>
+								<div class="stage__circles">
+									<div class="stage__green stage__circle" id="thirdgreen"></div>
+									<div class="stage__brown stage__circle" id="thirdbrown"></div>
+									<div class="stage__blue stage__circle" id="thirdblue"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="game__table">
+						<div class="game__deck">
+							<div class="game__cardBack">
+								<!-- <img src="./img/mythicCardBackground.png" alt=""> -->
+							</div>
+						</div>
+						<div class="game__playingCard">
+							<div class="game__cardFront" id="current-card">
+								<!-- <img src="./img/MythicCards/blue/blue10.png" alt=""> -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 	</div>
 </body>
-<script src="./js/script.js"></script>
+<script src="./js/script.js" type="module"></script>
 
 </html>
