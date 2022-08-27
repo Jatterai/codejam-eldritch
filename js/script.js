@@ -28,7 +28,8 @@ function start(e) {
 
 	//!!!
 	const ancPic = document.getElementById('ancient-pic');
-	ancPic.append(game.ancientCard());
+	const img = game.ancientCard();
+	img.onload = () => ancPic.append(img);
 
 	const tracker = document.querySelector('.game__tracker');
 	myEvents.trackerStart(game.ancient);
@@ -39,8 +40,11 @@ function start(e) {
 
 	cardBack.addEventListener('click', function nextCard(e) {
 		const cardContainer = document.getElementById('current-card');
-		cardContainer.style.backgroundImage = `url('${game.deck[currentStage][currentCard]['cardFace']}')`;
-
+		const cardImage = document.createElement('img');
+		cardImage.src = game.deck[currentStage][currentCard]['cardFace'];
+		cardImage.onload = () => {
+			cardContainer.style.background = `url('${cardImage.src}')`
+		}
 		const circlesContainers = document.querySelectorAll('.stage__circles');
 		let currentCircle = circlesContainers[currentStage]
 			.querySelector(`[data-color=${game.deck[currentStage][currentCard]['color']}]`);
