@@ -43,7 +43,7 @@ function start(e) {
 		const cardImage = document.createElement('img');
 		cardImage.src = game.deck[currentStage][currentCard]['cardFace'];
 		cardImage.onload = () => {
-			cardContainer.style.background = `url('${cardImage.src}')`
+			cardContainer.style.backgroundImage = `url('${cardImage.src}')`
 		}
 		const circlesContainers = document.querySelectorAll('.stage__circles');
 		let currentCircle = circlesContainers[currentStage]
