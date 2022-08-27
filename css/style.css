@@ -112,7 +112,7 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background: url("../../img/home.png") 0 0/cover no-repeat #333;
+  background: url("../img/home.png") 0 0/cover no-repeat #333;
   background-blend-mode: soft-light;
 }
 
@@ -463,7 +463,7 @@ section.off {
 .game__cardBack {
   position: relative;
   cursor: pointer;
-  background-image: url("../../img/mythicCardBackground.png");
+  background-image: url("../img/mythicCardBackground.png");
 }
 
 .game__cardBack::before {

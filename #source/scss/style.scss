@@ -26,7 +26,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	background: url("../../img/home.png") 0 0 / cover no-repeat #333;
+	background: url("../img/home.png") 0 0 / cover no-repeat #333;
 	background-blend-mode: soft-light;
 	::selection {
 		background: none;
@@ -308,7 +308,7 @@ section {
 	&__cardBack {
 		position: relative;
 		cursor: pointer;
-		background-image: url("../../img/mythicCardBackground.png");
+		background-image: url("../img/mythicCardBackground.png");
 		&::before {
 			content: "next card >";
 			text-transform: uppercase;
