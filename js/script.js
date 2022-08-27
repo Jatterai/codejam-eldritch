@@ -30,13 +30,26 @@ function start(e) {
 	const ancPic = document.getElementById('ancient-pic');
 	ancPic.append(game.ancientCard());
 
-	game.generateStages();
+	const tracker = document.querySelector('.game__tracker');
+	myEvents.trackerStart(game.ancient);
+
 	const cardBack = document.querySelector('.game__cardBack');
 	let currentStage = 0;
 	let currentCard = 0;
-	cardBack.addEventListener('click', function meow(e) {
+
+	cardBack.addEventListener('click', function nextCard(e) {
 		const cardContainer = document.getElementById('current-card');
 		cardContainer.style.backgroundImage = `url('${game.deck[currentStage][currentCard]['cardFace']}')`;
+
+		const circlesContainers = document.querySelectorAll('.stage__circles');
+		let currentCircle = circlesContainers[currentStage]
+			.querySelector(`[data-color=${game.deck[currentStage][currentCard]['color']}]`);
+
+		currentCircle.textContent = `${+currentCircle.textContent - 1}`;
+		if (currentCircle.textContent === '0') {
+			currentCircle.classList.add('disabled')
+		}
+
 		currentCard++;
 
 		if (!game.deck[currentStage][currentCard]) {
@@ -46,7 +59,7 @@ function start(e) {
 
 		if (!game.deck[currentStage]) {
 			e.currentTarget.classList.add('closed')
-			e.currentTarget.removeEventListener('click', meow);
+			e.currentTarget.removeEventListener('click', nextCard);
 			return;
 		}
 	});
@@ -74,4 +87,5 @@ function fadeOut(e) {
 	i.addEventListener('click', fadeOut)
 })
 
-startButton.addEventListener('click', start)
+startButton.addEventListener('click', start);
+

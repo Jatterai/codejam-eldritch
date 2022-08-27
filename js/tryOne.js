@@ -15,6 +15,8 @@ class Game {
 			blueCards: this.ancient.firstStage.blueCards + this.ancient.secondStage.blueCards + this.ancient.thirdStage.blueCards,
 			brownCards: this.ancient.firstStage.brownCards + this.ancient.secondStage.brownCards + this.ancient.thirdStage.brownCards,
 		}
+
+		this.deck = this.generateStages();
 	}
 
 	ancientCard() {
@@ -41,15 +43,20 @@ class Game {
 			if (gameDeck[color].length < this.requared[color]) {
 				let addDeck = (color === 'greenCards' ? greenCards :
 					color === 'blueCards' ? blueCards : brownCards)
-					.filter(i => i['difficulty'] === 'normal');
+					.filter(i => i['difficulty'] === 'normal')
+					.sort(i => Math.random() - 0.5);
 
 				while (gameDeck[color].length < this.requared[color]) {
 					gameDeck[color].push(
-						...addDeck.splice(this.randomiser(addDeck.length - 1), 1)
+						addDeck.pop()
 					)
 				}
 				addDeck = null;
 			}
+		}
+
+		for (let c in gameDeck) {
+			gameDeck[c].sort(i => Math.random() - 0.5).sort(i => Math.random() - 0.5)
 		}
 
 		return gameDeck;
@@ -57,6 +64,7 @@ class Game {
 
 	generateStages() {
 		const allCards = this.generateDeck();
+
 		const deck = []
 
 		for (let stage in this.ancient) {
@@ -66,16 +74,16 @@ class Game {
 			for (let color in this.ancient[stage]) {
 				const count = this.ancient[stage][color];
 
-				for (let i = 0; i < count; i++) {
-					arr.push(
-						...allCards[color].splice(this.randomiser(count - 1), 1)
-					)
+				for (let i = 1; i <= count; i++) {
+					arr.push(allCards[color].pop());
 				}
 			}
-			deck.push(arr.sort(i => Math.random() - 0.5));
 
+			arr.sort(i => Math.random() > 0.5 ? 1 : -1);
+			deck.push(arr);
 		}
-		this.deck = deck;
+
+		return deck;
 	}
 
 

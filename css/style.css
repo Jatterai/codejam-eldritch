@@ -540,10 +540,17 @@ section.off {
   border-radius: 50px;
   -webkit-box-shadow: -3px 3px 2px black;
           box-shadow: -3px 3px 2px black;
+  -webkit-transition: all 300ms ease 0s;
+  transition: all 300ms ease 0s;
 }
 
 .stage__circle:not(:last-child) {
   margin-right: 0.2em;
+}
+
+.stage__circle.disabled {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.4)));
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.4) 100%);
 }
 
 .stage__green {

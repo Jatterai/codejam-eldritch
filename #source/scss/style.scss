@@ -373,8 +373,12 @@ section {
 		background-color: #eeeeee;
 		border-radius: 50px;
 		box-shadow: -3px 3px 2px black;
+		transition: all 300ms ease 0s;
 		&:not(:last-child) {
 			margin-right: 0.2em;
+		}
+		&.disabled {
+			background-image: linear-gradient(rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.4) 100%);
 		}
 	}
 
