@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<title>Eldritch Cards</title> <!--  -->
+
+	<link rel="stylesheet" href="./css/style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="Content-type" content="text/html;charset=utf-8" />
+	<link rel="icon" type="image/x-icon" href='./img/favicon.ico'>
+</head>
+
+<body>
+	<div class="wrapper">
+		<section class="antients">
+			<div class="antients__container _container">
+				<h2 class="antients__title title">Choose The Antient</h2>
+				<ul class="antients__row">
+					<li class="antients__item antient" id="azathoth">
+
+						<div class="antient__img">
+							<img src="./img/Ancients/Azathoth.png" alt="">
+						</div>
+					</li>
+					<li class="antients__item antient checked" id="cthulhu">
+						<div class="antient__img">
+							<img src="./img/Ancients/Cthulthu.png" alt="">
+						</div>
+					</li>
+					<li class="antients__item antient" id="iogSothoth">
+						<div class="antient__img">
+							<img src="./img/Ancients/IogSothoth.png" alt="">
+						</div>
+					</li>
+					<li class="antients__item antient" id="shubNiggurath">
+						<div class="antient__img">
+							<img src="./img/Ancients/ShubNiggurath.png" alt="">
+						</div>
+					</li>
+				</ul>
+				<button type="button" class="antients__submit button disabled" id="anitents-submit">Sumbmit</button>
+			</div>
+		</section>
+		<section class="level off" hidden>
+
+			<div class="level__container _container">
+				<h2 class="title level__title">Difficulty</h2>
+				<ul action="#" class="level__list">
+					<li class="level__item" id="easiest">
+						Easiest then Easy
+					</li>
+					<li class="level__item" id="easy">
+						Easy
+					</li>
+					<li class="level__item checked" id="normal">
+						Normal
+					</li>
+					<li class="level__item" id="hard">
+						Hard
+					</li>
+					<li class="level__item" id="hardest">
+						Hardest then Hard
+					</li>
+				</ul>
+				<button type="button" class="level__button button">Start</button>
+			</div>
+		</section>
+		<section class="game off" hidden>
+			<div class="game__container _container">
+				<h2 class="game__title title">Heres your Game Deck</h2>
+				<div class="game__row">
+					<div class="game__info">
+						<div class="game__ancient-img" id="ancient-pic">
+						</div>
+						<div class="game__tracker">
+							<div class="game__stage game__stage-first stage">
+								<h3 class="stage__title">First Stage</h3>
+								<div class="stage__circles">
+									<div class="stage__green stage__circle" data-stage='firstStage' data-color='green'>
+									</div>
+									<div class="stage__brown stage__circle" data-stage='firstStage' data-color='brown'>
+									</div>
+									<div class="stage__blue stage__circle" data-stage='firstStage' data-color='blue'></div>
+								</div>
+							</div>
+							<div class="game__stage game__stage-second stage">
+								<h3 class="stage__title">Second Stage</h3>
+								<div class="stage__circles">
+									<div class="stage__green stage__circle" data-stage='secondStage' data-color='green'>
+									</div>
+									<div class="stage__brown stage__circle" data-stage='secondStage' data-color='brown'>
+									</div>
+									<div class="stage__blue stage__circle" data-stage='secondStage' data-color='blue'></div>
+								</div>
+							</div>
+							<div class="game__stage game__stage-third stage">
+								<h3 class="stage__title">Third Stage</h3>
+								<div class="stage__circles">
+									<div class="stage__green stage__circle" data-stage='thirdStage' data-color='green'>
+									</div>
+									<div class="stage__brown stage__circle" data-stage='thirdStage' data-color='brown'>
+									</div>
+									<div class="stage__blue stage__circle" data-stage='thirdStage' data-color='blue'></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="game__table">
+						<div class="game__deck">
+							<div class="game__cardBack">
+								<!-- <img src="./img/mythicCardBackground.png" alt=""> -->
+							</div>
+						</div>
+						<div class="game__playingCard">
+							<div class="game__cardFront" id="current-card">
+								<!-- <img src="./img/MythicCards/blue/blue10.png" alt=""> -->
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+</body>
+<script src="./js/script.js" type="module"></script>
+
+</html>
