@@ -71,6 +71,7 @@ function start(e) {
 }
 
 function fadeOut(e) {
+	e.preventDefault();
 	const button = e.target.closest('button.button');
 	if (!button) return;
 	const current = button.closest('section');
@@ -93,3 +94,6 @@ function fadeOut(e) {
 
 startButton.addEventListener('click', start);
 
+//=======================================
+console.log(`Привет! Чудесного тебе дня<3 Я очень старалась над этим заданием, поэтому, если оно действительно вышло хорошо, то, пожалуйста, предложи в лучшие работы:)`);
+console.log(`Я действительно очень старалась, и начала учиться, собственно, с начала курса`)

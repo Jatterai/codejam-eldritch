@@ -8,6 +8,14 @@
   border: 0;
 }
 
+*::-moz-selection {
+  background-color: none;
+}
+
+*::selection {
+  background-color: none;
+}
+
 *,
 *:before,
 *:after {
